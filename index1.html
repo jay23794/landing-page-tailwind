@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link href="./output.css" rel="stylesheet" />
+  <title>Nawab Tours</title>
+  <style>
+    /* Hide Scrollbar for Webkit Browsers */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide Scrollbar for Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="p-3 flex bg-white justify-between items-center fixed left-0 right-0 z-20 shadow-sm">
+      <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+        <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Nawab Tours Logo" />
+        <span class="text-lg font-medium font-display">Nawab Tours</span>
+      </a>
+      <div id="nav-menu" class="hidden lg:flex gap-12">
+        <a href="#" class="font-medium hover:text-primary">Home</a>
+        <a href="#" class="font-medium hover:text-primary">Enquiry</a>
+        <a href="#" class="font-medium hover:text-primary">Services</a>
+        <a href="#" class="font-medium hover:text-primary">Rental/Taxi</a>
+        <a href="#" class="font-medium hover:text-primary">Vendors</a>
+      </div>
+      <button class="p-2 lg:hidden" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-grey-600"></i>
+      </button>
+      <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden z-10">
+        <div id="nav-bar" class="flex justify-between">
+          <a href="#" id="brand" class="flex gap-2 items-center">
+            <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="Nawab Tours Logo" />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+          <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-grey-600"></i>
+          </button>
+        </div>
+        <div class="mt-6">
+          <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">Home</a>
+          <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">Enquiry</a>
+          <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">Services</a>
+          <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">Rental/Taxi</a>
+          <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">Vendors</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mt-16">
+    <section class="flex min-h-screen">
+      <div class="flex-1 flex justify-center items-center">
+        <img src="assets/tourist_places/city_palace.jpg" alt="City Palace" class="w-full h-full object-cover rounded-full" />
+      </div>
+      <div class="p-4 flex-1 flex-col items-center justify-center">
+        <h1 class="text-2xl text-primary">Incredible</h1>
+        <h1 class="text-6xl text-secondary mt-4">Fateh Sagar Lake</h1>
+        <p class="text-base mt-3 text-secondary">Fateh Sagar Lake is situated in the city of Udaipur in the Indian state of Rajasthan. It is an artificial lake named after Maharana Fateh Singh of Udaipur.</p>
+        <div class="flex gap-4 mt-4">
+          <button class="border font-thin border-primary text-primary w-8 h-8 rounded-full p-6 flex items-center justify-center">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="bg-primary font-thin text-white w-8 h-8 rounded-full p-6 flex items-center justify-center">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="flex flex-col items-center">
+        <h1 class="text-2xl text-primary">Tourist <br><span class="text-6xl text-secondary mt-4">Attractions</span></h1>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="flex flex-col">
+          <div class="flex flex-col h-80 items-end bg-white shadow-lg bg-cover" style="background-image: url('assets/tourist_places/fateh_sagar.jpg');">
+            <div class="flex-1">
+              <span class="m-2 inline-flex items-center rounded-full bg-red-50 px-2 py-1 text-xs font-medium text-primary ring-1 ring-inset ring-red-600/10">
+                <i class="fa-solid fa-circle mr-3" style="font-size:8px"></i> Trending Spot
+              </span>
+            </div>
+            <div class="p-2 bg-white flex w-full">
+              <div class="flex-1">
+                <p class="text-secondary text-sm">Fateh Sagar Lake</p>
+              </div>
+              <div class="flex-none items-center flex justify-end text-secondary">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other attractions -->
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="flex flex-col items-center">
+        <h1 class="text-2xl text-primary">Rental <br><span class="text-6xl text-secondary mt-4">Services</span></h1>
+      </div>
+      <div class="relative w-full max-w-6xl mt-7">
+        <div id="slider" class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory scroll-smooth p-4">
+          <div class="min-w-[300px] bg-primary flex flex-col items-center justify-center rounded-sm shadow-lg snap-center">
+            <img src="/assets/rental/2-wheeler.png" class="h-48" alt="2-Wheeler Rental">
+            <div class="p-2 bg-white flex w-full">
+              <div class="flex-1">
+                <p class="text-secondary text-sm">2-Wheeler Starting @450/-</p>
+              </div>
+              <div class="flex-none items-center flex justify-end text-secondary">
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other rental services -->
+        </div>
+      </div>
+      <div class="flex gap-4 mt-4">
+        <button onclick="prevSlide()" class="border font-thin border-primary text-primary w-8 h-8 rounded-full p-6 flex items-center justify-center">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="nextSlide()" class="bg-primary font-thin text-white w-8 h-8 rounded-full p-6 flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="flex flex-col items-center">
+        <h1 class="text-2xl text-primary">Hotel <br><span class="text-6xl text-secondary mt-4">Booking</span></h1>
+      </div>
+      <div class="relative items-center max-w-5xl overflow-hidden rounded-lg shadow-lg mt-7">
+        <div class="absolute bottom-4 right-4 bg-white/60 text-secondary px-4 py-2 rounded-lg">
+          <p id="carousel-desc" class="text-sm">We offer hotel booking services at reasonable prices, ensuring comfort and convenience for all guests.</p>
+        </div>
+        <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+          <img src="assets/hotel/hotel_6.png" class="w-full flex-shrink-0" alt="Hotel 1">
+          <img src="assets/hotel/hotel_2.png" class="w-full flex-shrink-0" alt="Hotel 2">
+        </div>
+      </div>
+      <div class="flex gap-4 mt-4">
+        <button onclick="prevSlideHotelBook()" class="rounded-full border font-thin border-primary text-primary w-8 h-8 p-6 flex items-center justify-center">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button onclick="nextSlideHotelBook()" class="bg-primary font-thin text-white w-8 h-8 rounded-full p-6 flex items-center justify-center">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="flex flex-col items-center">
+        <h1 class="text-2xl text-primary">Testimonial <br><span class="text-6xl text-secondary mt-4">Happy Customers</span></h1>
+      </div>
+      <div class="flex flex-row gap-4 mt-5">
+        <div class="flex shadow-lg mt-10 flex-row min-w-[300px]">
+          <div class="shadow-sm h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('assets/testimonial/test1.png')" title="Customer Testimonial"></div>
+          <div class="flex flex-col m-5 justify-between align-middle">
+            <img src="assets/testimonial/rating.svg" alt="Rating" class="h-6">
+            <p class="text-secondary mt-5">I highly recommend Brown. It has been so important for us as we continue to grow our company.</p>
+            <div class="flex">
+              <div class="text-sm">
+                <p class="text-secondary">Darrell Steward | <span class="font-semibold">Maharashtra</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Repeat for other testimonials -->
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="flex flex-col items-center">
+        <h1 class="text-2xl text-primary">About <br><span class="text-6xl text-secondary mt-4">Us</span></h1>
+      </div>
+      <div class="flex mt-5 p-10 gap-5">
+        <div class="flex-1 shadow-lg">
+          <img src="assets/about/ceo.png" alt="CEO" class="w-full object-cover shadow-lg">
+          <div class="flex flex-col p-4">
+            <h1 class="text-primary text-xl">Mr. Nawab Kaif</h1>
+            <p class="text-sm">Founder and CEO of <span class="font-semibold italic">Nawab Tours</span></p>
+            <div class="mt-3 flex justify-between">
+              <div>
+                <i class="fa-solid fa-mobile-screen-button text-primary"></i><span class="text-sm"> 8005792550, 7742066788</span>
+              </div>
+              <div>
+                <i class="fa-brands fa-instagram text-primary"></i>
+                <i class="fa-brands fa-instagram text-primary"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 flex-col flex justify-between p-4">
+          <div>
+            <h1 class="text-primary mt-5">Vision</h1>
+            <p class="mt-2">To be the ultimate travel guide for exploring the timeless beauty, rich culture, and unforgettable experiences of Udaipur.</p>
+            <h1 class="text-primary mt-5">Mission</h1>
+            <p class="mt-2">Our mission is to provide travellers with comprehensive and authentic insights into the magical city of Udaipur.</p>
+          </div>
+          <div class="flex flex-row">
+            <div class="flex flex-col items-center w-full">
+              <h1 class="text-primary text-xl">25+</h1>
+              <p class="text-primary text-sm">Years of Experience</p>
+            </div>
+            <div class="flex flex-col items-center w-full">
+              <h1 class="text-primary text-xl">5000+</h1>
+              <p class="text-primary text-sm">Happy Customers</p>
+            </div>
+            <div class="flex flex-col items-center w-full">
+              <h1 class="text-primary text-xl">2500+</h1>
+              <p class="text-primary text-sm">Successful Tours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-0 p-0">
+      <div class="flex flex-col items-center">
+        <h1 class="text-2xl text-primary items-start">Contact Us <br><span class="text-6xl text-secondary mt-4">Get in Touch</span></h1>
+      </div>
+      <div class="flex mt-5">
+        <div class="flex-1 flex flex-col items-center w-full bg-tertiary">
+          <div class="max-w-lg mx-auto p-6 w-full">
+            <form action="#" method="POST" class="space-y-4">
+              <input type="text" placeholder="Name" class="w-full p-2 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+              <input type="tel" placeholder="Mobile Number" class="w-full p-2 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+              <input type="email" placeholder="Email" class="w-full p-2 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+              <textarea rows="3" placeholder="Address" class="w-full p-2 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm"></textarea>
+              <button type="submit" class="bg-primary text-white text-sm rounded-sm p-2 ml-auto">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="flex-1 bg-[url('assets/contact/camel1.png')] bg-cover bg-center flex flex-col justify-end">
+          <div class="flex flex-row justify-center items-end align-bottom bg-primary p-5">
+            <div class="flex flex-col items-center w-full">
+              <i class="fa-solid fa-location-dot text-tertiary"></i>
+              <p class="text-white text-sm mt-3">Wall Street MG Road, Udaipur, 420001 Rajasthan</p>
+            </div>
+            <div class="flex flex-col items-center w-full">
+              <i class="fa-solid fa-envelope text-tertiary"></i>
+              <p class="text-white text-sm mt-3">example@gmail.com</p>
+            </div>
+            <div class="flex flex-col items-center w-full">
+              <i class="fa-solid fa-phone text-tertiary"></i>
+              <p class="text-white text-sm mt-3">8005792550 <br> 7742066788</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <script src="./script.js"></script>
+  </footer>
+</body>
+
+</html>

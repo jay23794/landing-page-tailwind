@@ -1,53 +1,45 @@
-const navDialog = document.getElementById('nav-dialog');
-function handleMenu(){
-   navDialog.classList.toggle('hidden')
-}
-const initialTranslateLTR = -48*4;
-const initialTranslateRTL = 36*4;
-function setUpIntersectionOberver(element, isLTR, speed){
-   const interSectionCallback= (entries)=>{
-         const isIntersecting = entries[0].isIntersecting
-         if(isIntersecting){
-            document.addEventListener('scroll',scrollHandler)
-         }else{
-            document.removeEventListener('scroll',scrollHandler)
-         }  
-        
-   }
-   const intersectionObserver = new IntersectionObserver(interSectionCallback)
-   intersectionObserver.observe(element)
+const slider = document.getElementById("slider");
 
-   function scrollHandler(){
-      const translateX = (window.innerHeight -element.getBoundingClientRect().top) * speed
+function nextSlide() { slider.scrollBy({ left: 320, behavior: "smooth" }); }
+function prevSlide() { slider.scrollBy({ left: -320, behavior: "smooth" }); }
 
-      let totalTranslate=0;
-      if(isLTR){
-         totalTranslate = translateX + initialTranslateLTR;
-      }else{
-         totalTranslate = -(translateX + initialTranslateLTR);
-      }
-      element.style.transform =  `translateX(${totalTranslate}px)`;
-   }
+
+let currentIndex = 0;
+const slides = document.querySelectorAll("#carousel img");
+const dots = document.querySelectorAll(".dot");
+const title = document.getElementById("carousel-title");
+const desc = document.getElementById("carousel-desc");
+
+const slideTexts = [
+    { title: "Nature", desc: "A beautiful view of nature." },
+    { title: "City Life", desc: "A stunning cityscape at night." },
+    { title: "Technology", desc: "Innovation shaping the future." }
+];
+
+function updateCarousel() {
+    document.getElementById("carousel").style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, index) => {
+        dot.classList.toggle("bg-white", index === currentIndex);
+        dot.classList.toggle("bg-gray-400", index !== currentIndex);
+    });
+    title.textContent = slideTexts[currentIndex].title;
+    desc.textContent = slideTexts[currentIndex].desc;
 }
 
-const line1 = document.getElementById('line1');
-const line2 = document.getElementById('line2');
-const line3 = document.getElementById('line3');
-const line4= document.getElementById('line4');
+function nextSlideHotelBook() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+}
 
-setUpIntersectionOberver(line1,true,0.15)
-setUpIntersectionOberver(line2,false,0.15)
-setUpIntersectionOberver(line3,true,0.15)
-setUpIntersectionOberver(line4,true,0.8)
+function prevSlideHotelBook() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+}
 
-const dtElements = document.querySelectorAll('dt');
-dtElements.forEach(element => {
-   element.addEventListener('click',()=>{
-      const ddid  = element.getAttribute('aria-controls');
-      const ddElement = document.getElementById(ddid)
-      const ddArrowIcon = element.querySelectorAll('i')[0]
-      
-      ddElement.classList.toggle('hidden')
-      ddArrowIcon.classList.toggle('-rotate-180')
-   })
-})
+function goToSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+}
+
+// Auto-play every 3 seconds
+setInterval(nextSlide, 3000);
