@@ -26,7 +26,6 @@
 <body>
   <nav class="p-3 flex bg-white justify-between items-center fixed left-0 right-0  z-20 shadow-sm">
     <a href="#" id="brand" class="flex gap-2 items-center flex-1">
-      <img class="object-cover max-h-12 max-w-12" src="./assets/asset 0.png" alt="logo" srcset="" />
       <span class="text-lg font-medium font-display">Nawab Tours</span>
     </a>
     <div id="nav-menu" class="hidden lg:flex gap-12">
@@ -34,7 +33,9 @@
       <a href="#" class="font-medium hover:text-primary">Enquiry</a>
       <a href="#" class="font-medium hover:text-primary">Services</a>
       <a href="#" class="font-medium hover:text-primary">Rental/Taxi</a>
+      <a href="#" class="font-medium hover:text-primary">Hotels</a>
       <a href="#" class="font-medium hover:text-primary">Vendors</a>
+
     </div>
     <!-- <div class="hidden lg:flex flex-1 justify-end">
       <button class="flex gap-2 items-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600">
@@ -69,37 +70,37 @@
   </nav>
   <!-- Main -->
   <main class="mt-16">
-    <div class="flex  min-h-screen">
-      <div class="flex-[3] flex justify-center align-middle content-center">
-        <div class=" relative  overflow-hidden rounded-b-full rounded-t-full ">
+    <div class="flex flex-col sm:flex-row min-h-screen">
+      <!-- Image Container -->
+      <div class="flex-[3] flex justify-center items-center p-4">
+        <div class="relative overflow-hidden  w-48 h-48 sm:w-auto sm:h-auto">
           <img src="assets/tourist_places/city_palace.jpg" alt="Circular Image" class="w-full h-full object-cover" />
         </div>
       </div>
-      <div class="p-4 flex-[3] flex-col items-center justify-center align-middle content-center">
-
-        <h1 class="text-2xl text-primary ">Incredible</h1>
-        <h1 class="text-6xl text-secondary mt-4">Fateh Sagar lake</h1>
-
-        <p class="text-base mt-3 text-secondary">
-          Fateh Sagar Lake is situated in the city of Udaipur in the Indian
-          state of Rajasthan.
-          It is an artificial lake named after Maharana Fateh Singh of Udaipur</p>
-
-
+    
+      <!-- Text Content -->
+      <div class="p-4 flex-[3] flex flex-col items-center justify-center text-center sm:text-left">
+        <h1 class="text-xl sm:text-2xl text-primary ">Incredible</h1>
+        <h1 class="text-4xl sm:text-6xl text-secondary mt-2 sm:mt-4">Fateh Sagar Lake</h1>
+        
+        <p class="text-sm sm:text-base mt-2 sm:mt-3 text-secondary max-w-md">
+          Fateh Sagar Lake is situated in the city of Udaipur in the Indian state of Rajasthan. 
+          It is an artificial lake named after Maharana Fateh Singh of Udaipur.
+        </p>
+    
+        <!-- Buttons -->
         <div class="flex gap-4 mt-4">
-          <button
-            class="border font-thin border-primary text-primary w-8 h-8 rounded-full p-6 flex items-center justify-center">
-            <i class="fa-solid fa-chevron-left fa-duotone"></i>
+          <button class="border font-thin border-primary text-primary w-10 h-10 rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-chevron-left"></i>
           </button>
-          <button class="bg-primary font-thin  text-white w-8 h-8 rounded-full p-6 flex items-center justify-center">
-            <i class="fa-solid fa-chevron-right fa-duotone"></i>
+          <button class="bg-primary font-thin text-white w-10 h-10 rounded-full flex items-center justify-center">
+            <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
-
-
-
       </div>
     </div>
+    
+    
     <!--Tourist attraction-->
     <div class="container">
       <div class="flex flex-col items-center">
@@ -269,6 +270,8 @@
 
       </div>
     </div>
+
+    
     <!--Rental Service-->
     <div class="container ">
       <div class="flex flex-col items-center">
@@ -381,7 +384,7 @@
     <!--Happy Customer-->
     <div class="container">
       <div class="flex flex-col items-center">
-        <h1 class="text-2xl text-primary items-start">Testimonial <br><span class="text-6xl text-secondary mt-4">Happy
+        <h1 class="text-2xl text-primary items-start">Testimonial <br><span class="text-6xl text-secondary mt-4 ">Happy
             Customers</span> </h1>
       </div>
       <div class="flex flex-row gap-4 mt-5">
@@ -421,7 +424,7 @@
     </div>
 
     <!--About Us -->
-    <div class="container">
+    <!-- <div class="container">
       <div class="flex flex-col items-center ">
         <h1 class="text-2xl text-primary items-start">About <br><span class="text-6xl text-secondary mt-4">Us</span>
         </h1>
@@ -486,8 +489,70 @@
           </div>
         </div>
       </div>
+    </div> -->
+
+    <div class="container mx-auto px-4">
+      <!-- Heading Section -->
+      <div class="flex flex-col items-center text-center">
+        <h1 class="text-2xl text-primary">About</h1>
+        <span class="text-4xl md:text-6xl text-secondary mt-2 md:mt-4">Us</span>
+      </div>
+    
+      <!-- Main Content Section -->
+      <div class="flex flex-col md:flex-row mt-5 p-4 md:p-10 gap-5">
+        <!-- CEO Section -->
+        <div class="flex-1 shadow-lg">
+          <img src="assets/about/ceo.png" alt="CEO" class="w-full object-cover shadow-lg">
+          <div class="flex flex-col p-4">
+            <h1 class="text-primary text-xl">Mr. Nawab Kaif</h1>
+            <p class="text-sm">Founder and CEO of <span class="font-semibold italic">Nawab Tours</span></p>
+            
+            <div class="mt-3 flex flex-col md:flex-row justify-between gap-2">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-mobile-screen-button text-primary"></i>
+                <span class="text-sm">8005792550 / 7742066788</span>
+              </div>
+              <div class="flex space-x-3 text-primary">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Vision & Mission Section -->
+        <div class="flex-1 flex flex-col justify-between p-4">
+          <div>
+            <h1 class="text-primary mt-5">Vision</h1>
+            <p class="mt-2">To be the ultimate travel guide for exploring the timeless beauty, rich culture, and unforgettable experiences of Udaipur, inspiring travelers to connect with the city’s unique heritage and natural splendor.</p>
+          </div>
+    
+          <div class="mt-10 md:mt-16">
+            <h1 class="text-primary">Mission</h1>
+            <p class="mt-2">Our mission is to provide travelers with comprehensive and authentic insights into the magical city of Udaipur. We aim to curate personalized travel experiences, uncover hidden gems, and offer expert recommendations—ensuring each journey is unforgettable.</p>
+          </div>
+    
+          <!-- Stats Section -->
+          <div class="flex flex-col md:flex-row text-center mt-8 md:mt-10 space-y-4 md:space-y-0">
+            <div class="flex-1">
+              <h1 class="text-primary text-xl">25+</h1>
+              <p class="text-primary text-sm">Years of Experience</p>
+            </div>
+            <div class="flex-1">
+              <h1 class="text-primary text-xl">5000+</h1>
+              <p class="text-primary text-sm">Satisfied Travelers</p>
+            </div>
+            <div class="flex-1">
+              <h1 class="text-primary text-xl">2500+</h1>
+              <p class="text-primary text-sm">Successful Tours</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-      <!--Contact us -->
+    
+
+      <!-- Contact us
       <div class="container mt-0 p-0">
         <div class="flex flex-col items-center ">
           <h1 class="text-2xl text-primary items-start">Contact us <br><span class="text-6xl text-secondary mt-4">Get in touch</span>
@@ -540,7 +605,59 @@
             </div>
           </div>
       </div>
+  </div> -->
+
+  <div class="container p-0 m-0">
+    <div class="flex flex-col items-center text-center">
+      <h1 class="text-2xl text-primary">Contact us</h1>
+      <span class="text-4xl md:text-6xl text-secondary mt-2 md:mt-4">Get in touch</span>
+    </div>
+  
+    <div class="flex flex-col md:flex-row mt-5">
+      <!-- Form Section -->
+      <div class="flex-1 flex flex-col items-center w-full bg-tertiary p-6">
+        <div class="max-w-lg w-full">
+          <form action="#" method="POST" class="space-y-4">
+            <div>
+              <input type="text" placeholder="Name" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+            </div>
+            <div>
+              <input type="tel" placeholder="Mobile number" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+            </div>
+            <div>
+              <input type="email" placeholder="Email" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+            </div>
+            <div>
+              <textarea rows="3" placeholder="Address" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary text-white text-sm rounded-sm p-3">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Image & Contact Info -->
+      <div class="flex-1 bg-[url('assets/contact/camel1.png')] bg-cover bg-center flex flex-col justify-end mt-5 md:mt-0">
+        <div class="flex flex-col md:flex-row justify-center items-center bg-primary p-5 space-y-5 md:space-y-0 md:space-x-5">
+          <div class="flex flex-col items-center w-full text-center">
+            <i class="fa-solid fa-location-dot text-tertiary text-xl"></i>
+            <p class="text-white text-sm mt-3">Wall Street MG Road, Udaipur, 420001 Rajasthan</p>
+          </div>
+          <div class="flex flex-col items-center w-full text-center">
+            <i class="fa-solid fa-envelope text-tertiary text-xl"></i>
+            <p class="text-white text-sm mt-3">Example@gmail.com</p>
+            <p class="text-white text-sm">Example@gmail.com</p>
+          </div>
+          <div class="flex flex-col items-center w-full text-center">
+            <i class="fa-solid fa-phone text-tertiary text-xl"></i>
+            <p class="text-white text-sm mt-3">8005792550 <br> 7742066788</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  
 </div>
     <script src="./script.js"></script>
 

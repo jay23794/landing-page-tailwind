@@ -9,8 +9,9 @@ module.exports = {
         'tertiary':'#213555'
       },
       fontFamily: {
-        'display':['Poppins','sans-serif'],
-        'body':['inter','sans-serif']
+        'oleo': ["Oleo Script", "cursive"],
+        'display':['Roboto','sans-serif'],
+        'body':['Roboto','sans-serif']
       },
       
     },
