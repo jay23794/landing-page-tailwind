@@ -2,23 +2,22 @@ const navDialog = document.getElementById('nav-dialog');
 function handleMenu(){
    navDialog.classList.toggle('hidden')
 }
- new Swiper('.cover-swiper', {
-   // Optional parameters
-   direction: 'horizontal',
-   loop: true,
- 
-   // If we need pagination
-   pagination: {
-     el: '.swiper-pagination',
-   },
- 
-   // Navigation arrows
-   navigation: {
-     nextEl: '.swiper-button-next',
-     prevEl: '.swiper-button-prev',
-   },
- 
-  
+ new Swiper('.cover-swipers', {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
  });
 
  new Swiper(".customer-swiper", {
@@ -27,7 +26,16 @@ function handleMenu(){
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
-  slidesPerView: 3,
+  breakpoints: {
+    // when window width is <= 768px (typical mobile)
+    768: {
+      slidesPerView: 1,
+    },
+    1000: {
+      slidesPerView: 4,
+    }
+  },
+ 
   spaceBetween: 30,
   freeMode: true,
   pagination: {
