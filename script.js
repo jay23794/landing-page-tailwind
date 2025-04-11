@@ -2,52 +2,78 @@ const navDialog = document.getElementById('nav-dialog');
 function handleMenu(){
    navDialog.classList.toggle('hidden')
 }
-const initialTranslateLTR = -48*4;
-const initialTranslateRTL = 36*4;
-function setUpIntersectionOberver(element, isLTR, speed){
-   const interSectionCallback= (entries)=>{
-         const isIntersecting = entries[0].isIntersecting
-         if(isIntersecting){
-            document.addEventListener('scroll',scrollHandler)
-         }else{
-            document.removeEventListener('scroll',scrollHandler)
-         }  
-        
-   }
-   const intersectionObserver = new IntersectionObserver(interSectionCallback)
-   intersectionObserver.observe(element)
+ new Swiper('.cover-swiper', {
+   // Optional parameters
+   direction: 'horizontal',
+   loop: true,
+ 
+   // If we need pagination
+   pagination: {
+     el: '.swiper-pagination',
+   },
+ 
+   // Navigation arrows
+   navigation: {
+     nextEl: '.swiper-button-next',
+     prevEl: '.swiper-button-prev',
+   },
+ 
+  
+ });
 
-   function scrollHandler(){
-      const translateX = (window.innerHeight -element.getBoundingClientRect().top) * speed
+ new Swiper(".customer-swiper", {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  slidesPerView: 3,
+  spaceBetween: 30,
+  freeMode: true,
+  pagination: {
+    
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
 
-      let totalTranslate=0;
-      if(isLTR){
-         totalTranslate = translateX + initialTranslateLTR;
-      }else{
-         totalTranslate = -(translateX + initialTranslateLTR);
-      }
-      element.style.transform =  `translateX(${totalTranslate}px)`;
-   }
+var swiper = new Swiper(".testimonial-swiper", {
+  cssMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  mousewheel: true,
+  keyboard: true,
+});
+
+
+const house = document.getElementById('house');
+const project = document.getElementById('project');
+const sale = document.getElementById('sale');
+let houseProgress = 0;
+let projectProgress = 0;
+let saleProgress = 0;
+
+function animateCounter() {
+  const interval = setInterval(() => {
+    houseProgress += 50;
+    projectProgress += 5;
+    saleProgress += 50;
+    house.textContent = `${houseProgress}`;
+    project.textContent = `${projectProgress}`;
+    sale.textContent = `${saleProgress}`;
+    
+    if (projectProgress >= 100) {
+       house.textContent = `2000 +`
+       project.textContent = `100 +`
+       sale.textContent = `1000 +`
+       clearInterval(interval);
+    }
+  }, 30);
 }
 
-const line1 = document.getElementById('line1');
-const line2 = document.getElementById('line2');
-const line3 = document.getElementById('line3');
-const line4= document.getElementById('line4');
-
-setUpIntersectionOberver(line1,true,0.15)
-setUpIntersectionOberver(line2,false,0.15)
-setUpIntersectionOberver(line3,true,0.15)
-setUpIntersectionOberver(line4,true,0.8)
-
-const dtElements = document.querySelectorAll('dt');
-dtElements.forEach(element => {
-   element.addEventListener('click',()=>{
-      const ddid  = element.getAttribute('aria-controls');
-      const ddElement = document.getElementById(ddid)
-      const ddArrowIcon = element.querySelectorAll('i')[0]
-      
-      ddElement.classList.toggle('hidden')
-      ddArrowIcon.classList.toggle('-rotate-180')
-   })
-})
+animateCounter();
