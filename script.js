@@ -1,4 +1,18 @@
 const navDialog = document.getElementById('nav-dialog');
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('main-header');
+  const navItem = document.getElementById('nav-menu-item');
+  console.log(navItem)
+  if (window.scrollY > 50) {
+    // When scrolled: white background, black text
+    header.classList.remove('bg-transparent', 'text-white');
+    header.classList.add('bg-white', 'text-black', );
+  } else {
+    // When at top: transparent bg, white text
+    header.classList.remove('bg-white', 'text-black', 'shadow-md');
+    header.classList.add('bg-transparent', 'text-white');
+  }
+});
 function handleMenu(){
    navDialog.classList.toggle('hidden')
 }
@@ -20,6 +34,19 @@ function handleMenu(){
   keyboard: true,
  });
 
+ var swiper = new Swiper(".achievment", {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+ 
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
  new Swiper(".customer-swiper", {
   autoplay: {
     delay: 3000,
@@ -32,7 +59,7 @@ function handleMenu(){
       slidesPerView: 1,
     },
     1000: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     }
   },
  

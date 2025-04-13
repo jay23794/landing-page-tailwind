@@ -10,28 +10,37 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <title>Siddhi Vinayak</title>
+
 </head>
 
 <body>
-    <header class="p-2  flex flex-row   gap-10 shadow-sm fixed top-0 bg-white w-full  z-50">
+    <header id="main-header"
+        class="p-4 flex flex-row gap-10 fixed top-0 w-full z-50 bg-transparent text-white transition-all duration-300">
         <a href="#" id="brand" class="flex gap-2 items-center  ">
-             <span class="text-lg font-medium font-display mx-3 text-secondary-500">Siddhi Vinayak</span>
+            <span class="text-lg font-medium font-display mx-3 text-white">Siddhi Vinayak</span>
         </a>
-        <div class="flex flex flex-row items-center gap-8 me-10 hidden lg:flex">
-            <a href="#" class=" block font-light text-gray-700 hover:text-secondary-500">Home</a>
-            <a href="#" class=" block font-light text-gray-700 hover:text-secondary-500">Cutomers</a>
-            <a href="#" class=" block font-light text-gray-700 hover:text-secondary-500">Trending</a>
-            <a href="#" class=" block font-light text-gray-700 hover:text-secondary-500">About us</a>
-            <a href="#" class=" block font-light text-gray-700 hover:text-secondary-500">Contact</a>
+        <div class="flex flex flex-row items-center gap-8 hidden lg:flex mx-auto" id="nav-menu-item">
+            <a href="#"
+                class=" block text-sm  font-medium   hover:text-secondary-500 transition-colors duration-200">Home</a>
+                <a href="#"
+                class="  block text-sm  font-medium  hover:text-secondary-500 transition-colors duration-200">Work</a>
+            <a href="#"
+                class="  block text-sm  font-medium  hover:text-secondary-500 transition-colors duration-200">Why us</a>
+            <a href="#"
+                class="  block text-sm font-medium  hover:text-secondary-500 transition-colors duration-200">Updates</a>
+            <a href="#"
+                class="  block text-sm font-medium  hover:text-secondary-500 transition-colors duration-200">Customer</a>
+            <a href="#"
+                class="  block text-sm  font-medium   hover:text-secondary-500 transition-colors duration-200">Contact</a>
         </div>
-        
-        <div class=" flex    gap-2 items-center mx-auto" style="margin-right: 30px;">
+
+        <div class=" flex    gap-2 items-center " style="margin-right: 30px;">
             <img src="assets/contact/telephone-symbol-button.png" alt="" srcset="" class="w-4 h-4">
-            <p class=" text-sm font-medium text-gray-700 hidden md:block">
-                 9730727585
+            <p class=" text-sm font-medium  hidden md:block">
+                9619805025
             </p>
-            <p class=" text-sm font-medium text-gray-700">
-                9730727585
+            <p class=" text-sm font-medium ">
+                9930271974
             </p>
         </div>
 
@@ -42,7 +51,8 @@
         <div id="nav-dialog" class="hidden fixed bg-white inset-0 p-3 md:hidden z-10">
             <div id="nav-bar" class="flex justify-between">
                 <a href="#" id="brand" class="flex gap-2 items-center">
-                    <img class="object-cover max-h-12 max-w-12" src="./assets/contact/instagram.png" alt="logo" srcset="" />
+                    <img class="object-cover max-h-12 max-w-12" src="./assets/contact/instagram.png" alt="logo"
+                        srcset="" />
                     <span class="text-lg font-medium font-display">ToDesktop</span>
                 </a>
                 <button class="p-2 md:hidden" onclick="handleMenu()">
@@ -55,7 +65,7 @@
                 <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">Trending</a>
                 <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">About us</a>
                 <a href="#" class="font-medium block m-3 p-3 hover:bg-gray-50 rounded-lg">Contact</a>
-                
+
             </div>
 
         </div>
@@ -63,79 +73,91 @@
         </div>
     </header>
 
-  
-        <div class="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center ">
-           
-            <div class=" flex flex-col justify-center items-center  p-0  mt-16 md:mt-0 lg:mt-0 xl:mt-0">
-                <p class=" text-4xl  md:text-5xl lg:text-5xl xl:text-5xl font-bold text-primary-700  mt-16 md:mt-0 lg:mt-0 xl:mt-0 ">Find Your Dream
-                    <br> Property By Us<span class="text-secondary-500">.</span>
-                </p>
-                <div class="flex flex-row mt-5  gap-2">
-                    <div class="flex justify-center items-center">
-                        <span class="border border-primary-700 text-primary-700  max-auto rounded-3xl px-4 py-1 text-sm font-normal">
-                            Shop
-                        </span>
+
+    <!-- <div class="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 justify-center items-center ">
+
+        <div class=" flex flex-col justify-center items-center  p-0  mt-16 md:mt-0 lg:mt-0 xl:mt-0">
+            <p class=" text-4xl  md:text-5xl lg:text-5xl xl:text-5xl font-bold text-primary-700  mt-16 md:mt-0 lg:mt-0 xl:mt-0 ">Find Your Dream
+                <br> Property By Us<span class="text-secondary-500">.</span>
+            </p>
+            <div class="flex flex-row mt-5  gap-2">
+                <div class="flex justify-center items-center">
+                    <span class="border border-primary-700 text-primary-700  max-auto rounded-3xl px-4 py-1 text-sm font-normal">
+                        Shop
+                    </span>
+                </div>
+                <div class="flex justify-center items-center">
+                    <span class="border border-secondary-500 text-secondary-500  max-auto rounded-3xl px-4 py-1 text-sm font-normal">
+                        Apartment
+                    </span>
+                </div>
+                <div class="flex justify-center items-center">
+                    <span class="border border-primary-700 text-primary-700  max-auto rounded-3xl px-4 py-1 text-sm font-normal">
+                        Office</span>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:block mt-2">
+            <div class="swiper cover-swipers">
+                <div class="swiper-wrapper   mt-8 md:mt-0 lg:mt-0 xl:mt-0">
+                    <div class="swiper-slide">
+                        <img src="assets/cover/cover_3.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
+
                     </div>
-                    <div class="flex justify-center items-center">
-                        <span class="border border-secondary-500 text-secondary-500  max-auto rounded-3xl px-4 py-1 text-sm font-normal">
-                            Apartment
-                        </span>
+                    <div class="swiper-slide">
+                        <img src="../landing-page-tailwind/assets/cover/cover_1.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
+
                     </div>
-                    <div class="flex justify-center items-center">
-                        <span class="border border-primary-700 text-primary-700  max-auto rounded-3xl px-4 py-1 text-sm font-normal">
-                            Office</span>
+                    <div class="swiper-slide  ">
+                        <img src="../landing-page-tailwind/assets/cover/cover_3.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
+
+                    </div>
+                    <div class="swiper-slide  ">
+                        <img src="../landing-page-tailwind/assets/cover/cover_3.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
+
                     </div>
                 </div>
-             </div>
-             <div class="hidden md:block mt-2">
-                   <div class="swiper cover-swipers">
-                    <div class="swiper-wrapper   mt-8 md:mt-0 lg:mt-0 xl:mt-0">
-                        <div class="swiper-slide">
-                                    <img src="../landing-page-tailwind/assets/cover/cover_3.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
-        
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="../landing-page-tailwind/assets/cover/cover_3.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
-        
-                        </div>
-                        <div class="swiper-slide  ">
-                            <img src="../landing-page-tailwind/assets/cover/cover_3.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
-        
-                        </div>
-                        <div class="swiper-slide  ">
-                            <img src="../landing-page-tailwind/assets/cover/cover_3.jpg" class="h-[500px] w-full object-cover" alt="" srcset="">
-        
-                        </div>
-                    </div>
-                    </div>
-                   
-             </div>
-          
-              
+            </div>
+
         </div>
 
 
-    <!--Featured category-->
-    <div class="bg-primary-50">
+    </div> -->
+
+    <div class=" w-full min-h-screen bg-[url('assets/cover/main_cover.png')] bg-no-repeat bg-cover bg-center flex flex-col justify-around items-center">
        
+        <div>
+            <p class="text-center mt-10 text-white text-4xl font-semibold">Helping you find the property of your dreams.</p>
+        <p class="text-center text-white text-sm font-medium mt-5 ">Creating quality urban lifestyles, building stronger communities</p>
+        </div> 
+        <div></div>
+    </div>
+    <!--Featured category-->
+    <!-- <div class="bg-primary-50">
+
         <div class=" p-12">
             <p class="text-2xl font-bold flex  items-center text-secondary-500 ">Featured Category
             </p>
             <p class="text-sm font-normal ">Offering a wide range of properties</p>
 
-            <div class="grid  sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6  flex justify-center items-center  mt-10 gap-4  ">
-                <div class=" flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md">
-                    <img src="assets/feature_list/1.svg" alt="" class="h-12 w-12 group-hover:h-16 group-hover:w-16 transition-all duration-300 ease-in-out fill-orange-900">
-                    
+            <div
+                class="grid  sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-6 xl:grid-cols-6  flex justify-center items-center  mt-10 gap-4  ">
+                <div
+                    class=" flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md">
+                    <img src="assets/feature_list/1.svg" alt=""
+                        class="h-12 w-12 group-hover:h-16 group-hover:w-16 transition-all duration-300 ease-in-out fill-orange-900">
+
                     <div>
-                      <p class="text-center font-semibold text-md text-primary-700 group-hover:text-xl transition-all duration-300">
-                        House
-                      </p>
-                      <p class="text-xs text-center">2 Properties</p>
+                        <p
+                            class="text-center font-semibold text-md text-primary-700 group-hover:text-xl transition-all duration-300">
+                            House
+                        </p>
+                        <p class="text-xs text-center">2 Properties</p>
                     </div>
-                  </div>
-                  
-                <div class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md">
+                </div>
+
+                <div
+                    class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md">
                     <img src="assets/feature_list/2.svg" alt="" srcset="" class="h-12 w-12 text-primary-700">
                     <div>
                         <p class=" text-center font-semibold text-md text-primary-700">Apartment</p>
@@ -143,7 +165,8 @@
                     </div>
 
                 </div>
-                <div class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
+                <div
+                    class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
                     <img src="assets/feature_list/3.svg" alt="" srcset="" class="h-12 w-12 text-primary-700">
                     <div>
                         <p class=" text-center font-semibold text-md text-primary-700">Office</p>
@@ -152,7 +175,8 @@
 
 
                 </div>
-                <div class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
+                <div
+                    class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
                     <img src="assets/feature_list/4.svg" alt="" srcset="" class="h-12 w-12 text-primary-700">
                     <div>
                         <p class=" text-center font-semibold text-md text-primary-700">Single Family</p>
@@ -160,7 +184,8 @@
                     </div>
 
                 </div>
-                <div class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
+                <div
+                    class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
                     <img src="assets/feature_list/5.svg" alt="" srcset="" class="h-12 w-12 text-primary-700">
                     <div>
                         <p class=" text-center font-semibold text-md text-primary-700">Shop Office</p>
@@ -168,7 +193,8 @@
                     </div>
 
                 </div>
-                <div class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
+                <div
+                    class="flex rounded-xl flex-col justify-center items-center h-44 w-44 sm:w-64 md:w-auto lg:w-auto gap-8 bg-white  hover:shadow-md ">
                     <img src="assets/feature_list/6.svg" alt="" srcset="" class="h-12 w-12 text-primary-700">
                     <div>
                         <p class=" text-center font-semibold text-md text-primary-700">Rental</p>
@@ -179,12 +205,70 @@
 
             </div>
         </div>
+    </div> -->
+
+    <div class="">
+
+        <div class=" p-12">
+            <p class="text-2xl font-bold   text-center  ">Featured Category </p>
+            <p class="text-sm font-normal text-center ">Offering a wide range of properties</p>
+
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 lg:grid-cols-12 gap-4 mt-10 place-items-center ">
+               
+                <div class="col-span-1"></div>
+
+                <div class=" rounded-xl col-span-2 bg-[url('assets/feature_list/cover_2.jpg')] w-full h-64  bg-no-repeat bg-cover bg-center rounded-xl ">
+                    <div class="p-6">
+                        <p class=" text-start font-semibold text-sm text-primary-700">Apartment/Flats</p>
+                        <p class="text-xs">2 Properties</p>
+                    </div>
+
+                </div>
+                <div  class=" rounded-xl col-span-2 bg-[url('assets/feature_list/2.png')] w-full h-64  bg-no-repeat bg-cover bg-center">
+                <div class="p-6">
+                        <p class=" text-start font-semibold text-sm text-primary-700"> Pent House / Duplex</p>
+                        <p class="text-xs">2 Properties</p>
+                    </div>
+
+
+                </div>
+                <div class=" rounded-xl col-span-2 bg-[url('assets/feature_list/3.png')] w-full h-64  bg-no-repeat bg-cover bg-center ">
+                    <div class="p-6">
+                        <p class="text-start font-semibold text-sm text-primary-700">Commercial Office</p>
+                        <p class="text-xs">2 Properties</p>
+                    </div>
+
+                </div>
+              
+                <div class=" rounded-xl col-span-2 bg-[url('assets/feature_list/1.png')] w-full h-64  bg-no-repeat bg-cover bg-center">
+                    <div class="p-6">
+                        <p class=" text-start font-semibold text-sm text-primary-700">Rental</p>
+                        <p class="text-xs">2 Properties</p>
+                    </div>
+
+                </div>
+
+                <div class=" rounded-xl col-span-2 bg-[url('assets/feature_list/plot_1.png')] w-full h-64  bg-no-repeat bg-cover bg-center rounded-xl">
+                    <div class="p-6">
+                        <p class=" text-start font-semibold text-sm text-primary-700">Plots</p>
+                       
+                    </div>
+
+                </div>
+             
+                <div class="col-span-1 md:col-span-3"></div>
+
+
+            </div>
+        </div>
     </div>
 
-    <div class="container">
-        <p class="text-2xl font-bold  text-center text-secondary-500 ">How It works?</p>
+    <div class="container" id="content-below">
+        <p class="text-2xl font-bold  text-center  ">How It works?</p>
         <p class="text-sm font-normal text-center"> Find a perfect Property </p>
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2   xl:grid-cols-2  flex justify-center items-center mt-5">
+        <div
+            class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2   xl:grid-cols-2  flex justify-center items-center mt-5">
             <div class="flex justify-center items-center">
                 <div class="flex flex-1 flex-col gap-8 justify-center items-center">
                     <div>
@@ -210,355 +294,427 @@
                         <img src="assets/feature_list/w_3.svg" alt="" class="w-8">
                         <p class="mt-3 font-medium text-md text-primary-600">Finalize & Take the Keys</p>
                         <p class="text-xs ">Pick the perfect property, complete the paperwork, and receive your keys
-                            <br> — it’s that simple!</p>
+                            <br> — it’s that simple!
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="flex justify-center items-center  hidden md:block">
-                <img src="../landing-page-tailwind/assets/cover/cover_2.jpg" class=" rounded-xl h-96  object-cover" alt="" srcset="">
+                <img src="../landing-page-tailwind/assets/cover/cover_2.jpg" class=" rounded-xl h-96  object-cover"
+                    alt="" srcset="">
             </div>
 
         </div>
     </div>
-    
+
     <!--Customer-->
     <div class="">
         <div class=" p-12 ">
-            <p class="text-2xl font-bold flex justify-start  items-center text-secondary-500 ">Recent Updates
+            <p class="text-2xl font-bold flex justify-start  items-center ">Recent Updates
             </p>
-                
-                <div class="swiper customer-swiper mt-10 ">
-                    <div class="swiper-wrapper " style="margin-bottom: 18px;">
-                        <div class="swiper-slide ">
-                            <div class="shadow-lg bg-white  ">
-                                <div class=" flex flex-col justify-center overflow-hidden">
-                                    <img src="./assets/today_sale/sale_1.jpg" alt="" srcset="" class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
-                                    <div class="px-5 flex flex-col mt-5  justify-between ">
-                                        <p class="text-xl font-semibold text-primary-600 ">2.2 Crore</p>
-                                        <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
-                                        <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In Heart Of
-                                            <br> Westbury. Newly Renovated With New Wood</p>
-                                    </div>
-                                    <div class="flex flex-row justify-between p-5 mt-3">
-                                        <div class="flex-col flex justify-between">
-                                            <div class=" justify-between flex ">
-                                                <p class="text-sm text-gray-400 font-semibold ">2 <i class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
-                                            </div>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="text-sm text-gray-400 font-semibold">3 <i class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">1 <i class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
-    
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o" aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
-    
-                                        </div>
-                                    </div>
-    
-                                    <hr class="border-t border-gray-300  ">
-                                    <div class="flex  p-5">
-                                        <div> <img src="/landing-page-tailwind/assets/customer/author.jpg" class="rounded-full w-8 " alt="" srcset=""></div>
-                                        <div>
-                                            <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
-                                            <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
-                                        </div>
-                                    </div>
-    
+
+            <div class="swiper customer-swiper mt-10 ">
+                <div class="swiper-wrapper " style="margin-bottom: 18px;">
+                    <div class="swiper-slide ">
+                        <div class="shadow-lg bg-white  ">
+                            <div class=" flex flex-col justify-center overflow-hidden">
+                                <img src="./assets/today_sale/sale_1.jpg" alt="" srcset=""
+                                    class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
+                                <div class="px-5 flex flex-col mt-5  justify-between ">
+                                    <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
+                                    <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In
+                                        Heart Of
+                                        <br> Westbury. Newly Renovated With New Wood
+                                    </p>
                                 </div>
-    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="shadow-lg bg-white  ">
-                                <div class=" flex flex-col justify-center overflow-hidden">
-                                    <img src="./assets/today_sale/sale_1.jpg" alt="" srcset="" class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
-                                    <div class="px-5 flex flex-col mt-5  justify-between ">
-                                        <p class="text-xl font-semibold text-primary-600 ">2.2 Crore</p>
-                                        <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
-                                        <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In Heart Of
-                                            <br> Westbury. Newly Renovated With New Wood</p>
+                                <div class="flex flex-row justify-between p-5 mt-3">
+                                    <div class="flex-col flex justify-between">
+                                        <div class=" justify-between flex ">
+                                            <p class="text-sm text-gray-400 font-semibold ">2 <i
+                                                    class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
                                     </div>
-                                    <div class="flex flex-row justify-between p-5 mt-3">
-                                        <div class="flex-col flex justify-between">
-                                            <div class=" justify-between flex ">
-                                                <p class="text-sm text-gray-400 font-semibold ">2 <i class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
-                                            </div>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="text-sm text-gray-400 font-semibold">3 <i class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">1 <i class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
-    
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o" aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
-    
-                                        </div>
+                                    <div class="">
+                                        <p class="text-sm text-gray-400 font-semibold">3 <i
+                                                class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
                                     </div>
-    
-                                    <hr class="border-t border-gray-300  ">
-                                    <div class="flex  p-5">
-                                        <div> <img src="/landing-page-tailwind/assets/customer/author.jpg" class="rounded-full w-8 " alt="" srcset=""></div>
-                                        <div>
-                                            <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
-                                            <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
-                                        </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">1 <i
+                                                class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
+
                                     </div>
-    
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o"
+                                                aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
+
+                                    </div>
                                 </div>
-    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="shadow-lg bg-white  ">
-                                <div class=" flex flex-col justify-center overflow-hidden">
-                                    <img src="./assets/today_sale/sale_1.jpg" alt="" srcset="" class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
-                                    <div class="px-5 flex flex-col mt-5  justify-between ">
-                                        <p class="text-xl font-semibold text-primary-600 ">2.2 Crore</p>
-                                        <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
-                                        <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In Heart Of
-                                            <br> Westbury. Newly Renovated With New Wood</p>
+
+                                <hr class="border-t border-gray-300  ">
+                                <div class="flex  p-5">
+                                    <div> <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-8 " alt="" srcset=""></div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
                                     </div>
-                                    <div class="flex flex-row justify-between p-5 mt-3">
-                                        <div class="flex-col flex justify-between">
-                                            <div class=" justify-between flex ">
-                                                <p class="text-sm text-gray-400 font-semibold ">2 <i class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
-                                            </div>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="text-sm text-gray-400 font-semibold">3 <i class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">1 <i class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
-    
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o" aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
-    
-                                        </div>
-                                    </div>
-    
-                                    <hr class="border-t border-gray-300  ">
-                                    <div class="flex  p-5">
-                                        <div> <img src="/landing-page-tailwind/assets/customer/author.jpg" class="rounded-full w-8 " alt="" srcset=""></div>
-                                        <div>
-                                            <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
-                                            <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
-                                        </div>
-                                    </div>
-    
                                 </div>
-    
+
                             </div>
+
                         </div>
-                        <div class="swiper-slide">
-                            <div class="shadow-lg bg-white  ">
-                                <div class=" flex flex-col justify-center overflow-hidden">
-                                    <img src="./assets/today_sale/sale_1.jpg" alt="" srcset="" class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
-                                    <div class="px-5 flex flex-col mt-5  justify-between ">
-                                        <p class="text-xl font-semibold text-primary-600 ">2.2 Crore</p>
-                                        <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
-                                        <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In Heart Of
-                                            <br> Westbury. Newly Renovated With New Wood</p>
-                                    </div>
-                                    <div class="flex flex-row justify-between p-5 mt-3">
-                                        <div class="flex-col flex justify-between">
-                                            <div class=" justify-between flex ">
-                                                <p class="text-sm text-gray-400 font-semibold ">2 <i class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
-                                            </div>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="text-sm text-gray-400 font-semibold">3 <i class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">1 <i class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
-    
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o" aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
-    
-                                        </div>
-                                    </div>
-    
-                                    <hr class="border-t border-gray-300  ">
-                                    <div class="flex  p-5">
-                                        <div> <img src="/landing-page-tailwind/assets/customer/author.jpg" class="rounded-full w-8 " alt="" srcset=""></div>
-                                        <div>
-                                            <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
-                                            <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="shadow-lg bg-white  ">
-                                <div class=" flex flex-col justify-center overflow-hidden">
-                                    <img src="./assets/today_sale/sale_1.jpg" alt="" srcset="" class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
-                                    <div class="px-5 flex flex-col mt-5  justify-between ">
-                                        <p class="text-xl font-semibold text-primary-600 ">2.2 Crore</p>
-                                        <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
-                                        <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In Heart Of
-                                            <br> Westbury. Newly Renovated With New Wood</p>
-                                    </div>
-                                    <div class="flex flex-row justify-between p-5 mt-3">
-                                        <div class="flex-col flex justify-between">
-                                            <div class=" justify-between flex ">
-                                                <p class="text-sm text-gray-400 font-semibold ">2 <i class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
-                                            </div>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
-                                        </div>
-                                        <div class="">
-                                            <p class="text-sm text-gray-400 font-semibold">3 <i class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">1 <i class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
-    
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o" aria-hidden="true"></i></p>
-                                            <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
-    
-                                        </div>
-                                    </div>
-    
-                                    <hr class="border-t border-gray-300  ">
-                                    <div class="flex  p-5">
-                                        <div> <img src="/landing-page-tailwind/assets/customer/author.jpg" class="rounded-full w-8 " alt="" srcset=""></div>
-                                        <div>
-                                            <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
-                                            <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
-                                        </div>
-                                    </div>
-    
-                                </div>
-    
-                            </div>
-                        </div>
-    
                     </div>
-                    <!-- <div class="swiper-pagination mt-10"></div> -->
-    
+                    <div class="swiper-slide">
+                        <div class="shadow-lg bg-white  ">
+                            <div class=" flex flex-col justify-center overflow-hidden">
+                                <img src="./assets/today_sale/sale_1.jpg" alt="" srcset=""
+                                    class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
+                                <div class="px-5 flex flex-col mt-5  justify-between ">
+                                    <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
+                                    <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In
+                                        Heart Of
+                                        <br> Westbury. Newly Renovated With New Wood
+                                    </p>
+                                </div>
+                                <div class="flex flex-row justify-between p-5 mt-3">
+                                    <div class="flex-col flex justify-between">
+                                        <div class=" justify-between flex ">
+                                            <p class="text-sm text-gray-400 font-semibold ">2 <i
+                                                    class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm text-gray-400 font-semibold">3 <i
+                                                class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">1 <i
+                                                class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
+
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o"
+                                                aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
+
+                                    </div>
+                                </div>
+
+                                <hr class="border-t border-gray-300  ">
+                                <div class="flex  p-5">
+                                    <div> <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-8 " alt="" srcset=""></div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="shadow-lg bg-white  ">
+                            <div class=" flex flex-col justify-center overflow-hidden">
+                                <img src="./assets/today_sale/sale_1.jpg" alt="" srcset=""
+                                    class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
+                                <div class="px-5 flex flex-col mt-5  justify-between ">
+                                    <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
+                                    <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In
+                                        Heart Of
+                                        <br> Westbury. Newly Renovated With New Wood
+                                    </p>
+                                </div>
+                                <div class="flex flex-row justify-between p-5 mt-3">
+                                    <div class="flex-col flex justify-between">
+                                        <div class=" justify-between flex ">
+                                            <p class="text-sm text-gray-400 font-semibold ">2 <i
+                                                    class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm text-gray-400 font-semibold">3 <i
+                                                class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">1 <i
+                                                class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
+
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o"
+                                                aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
+
+                                    </div>
+                                </div>
+
+                                <hr class="border-t border-gray-300  ">
+                                <div class="flex  p-5">
+                                    <div> <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-8 " alt="" srcset=""></div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="shadow-lg bg-white  ">
+                            <div class=" flex flex-col justify-center overflow-hidden">
+                                <img src="./assets/today_sale/sale_1.jpg" alt="" srcset=""
+                                    class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
+                                <div class="px-5 flex flex-col mt-5  justify-between ">
+                                    <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
+                                    <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In
+                                        Heart Of
+                                        <br> Westbury. Newly Renovated With New Wood
+                                    </p>
+                                </div>
+                                <div class="flex flex-row justify-between p-5 mt-3">
+                                    <div class="flex-col flex justify-between">
+                                        <div class=" justify-between flex ">
+                                            <p class="text-sm text-gray-400 font-semibold ">2 <i
+                                                    class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm text-gray-400 font-semibold">3 <i
+                                                class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">1 <i
+                                                class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
+
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o"
+                                                aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
+
+                                    </div>
+                                </div>
+
+                                <hr class="border-t border-gray-300  ">
+                                <div class="flex  p-5">
+                                    <div> <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-8 " alt="" srcset=""></div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="shadow-lg bg-white  ">
+                            <div class=" flex flex-col justify-center overflow-hidden">
+                                <img src="./assets/today_sale/sale_1.jpg" alt="" srcset=""
+                                    class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110">
+                                <div class="px-5 flex flex-col mt-5  justify-between ">
+                                    <p class=" text-xl font-medium mt-1">Beautiful Flat in malad west</p>
+                                    <p class="text-gray-500 text-sm mt-4 font-normal">Beautiful Huge 1 Family House In
+                                        Heart Of
+                                        <br> Westbury. Newly Renovated With New Wood
+                                    </p>
+                                </div>
+                                <div class="flex flex-row justify-between p-5 mt-3">
+                                    <div class="flex-col flex justify-between">
+                                        <div class=" justify-between flex ">
+                                            <p class="text-sm text-gray-400 font-semibold ">2 <i
+                                                    class="fa fa-bath ml-1  text-gray-300 " aria-hidden="true"></i></p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bedrooms</p>
+                                    </div>
+                                    <div class="">
+                                        <p class="text-sm text-gray-400 font-semibold">3 <i
+                                                class="fa fa-bath  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Bathroom</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">1 <i
+                                                class="fa fa-car  text-gray-300 " aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Car Parking</p>
+
+                                    </div>
+                                    <div>
+                                        <p class="text-sm text-gray-400 font-semibold">650 <i class="fa fa-square-o"
+                                                aria-hidden="true"></i></p>
+                                        <p class="text-xs text-gray-500 mt-1 font-normal">Square Ft</p>
+
+                                    </div>
+                                </div>
+
+                                <hr class="border-t border-gray-300  ">
+                                <div class="flex  p-5">
+                                    <div> <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-8 " alt="" srcset=""></div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm ">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
-            
-           
+                <!-- <div class="swiper-pagination mt-10"></div> -->
+
+            </div>
+
+
         </div>
     </div>
 
     <!--WHY us-->
-    <div class="bg-primary-50">
-        <div class="container">
-
-            <p class="text-2xl font-bold   text-secondary-500   text-center">Why us
+  
+        <div class="px-[10%] ">
+            <p class="text-2xl font-bold text-center mt-10 ">Why us
             </p>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-10 mt-10">
+               
+                <div class=" hidden md:block">
+                    <div class="swiper achievment">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/about_us/achieve/7.jpg" class=" rounded-xl w-full h-96 object-cover">
+                            </div>
 
+                            <div class="swiper-slide">
+                                <img src="assets/about_us/achieve/8.jpg"
+                                    class=" rounded-xl w-full h-96 object-cover object-top">
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <img src="assets/about_us/achieve/9.jpg"
+                                        class=" rounded-xl w-full h-96 object-cover">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <img src="assets/about_us/achieve/2.jpg"
+                                        class=" rounded-xl w-full h-96 object-cover object-center ">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <img src="assets/about_us/achieve/10.jpg"
+                                        class=" rounded-xl w-full h-96 object-cover object-center object-top">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <img src="assets/about_us/achieve/4.jpg"
+                                        class=" rounded-xl w-full h-96 object-cover object-center">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <img src="assets/about_us/achieve/11.jpg"
+                                        class=" rounded-xl w-full h-96 object-cover object-center">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-slide">
+                                    <img src="assets/about_us/achieve/6.jpg"
+                                        class=" rounded-xl w-full h-96 object-cover object-center">
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2   xl:grid-cols-2   gap-5 mt-5">
-                <div class="1">
-                    <img src="/landing-page-tailwind/assets/about_us/desk.jpg" class=" h-96 w-full z-50 rounded-md" alt="" srcset="">
+                    </div>
                 </div>
-                <div class="">
-                    <p class="font-light text-md text-gray-900 text-justify">
-                        <span class="text-md font-bold   text-primary-700 mt-8 ">The Leading Real Estate
-                            Marketplace</span>
-                        <br> Over the past 10 years, our real estate company has earned the trust of countless clients by delivering exceptional service and value. With over 100 projects completed, 1000+ sales, and 2000+ rentals managed, we’ve built a solid
-                        foundation in the industry. To date, we’ve successfully handled properties spanning over 5 lakh square feet, and our commitment to excellence continues to drive us forward. As we work on many exciting projects, we remain dedicated
-                        to providing the highest level of satisfaction and professionalism to all our clients.
+
+                <div class="flex flex-col justify-center items-center">
+                    <p class="text-4xl font-bold   text-primary-700 mt-8 ">
+                        The Leading Real Estate Marketplace
+                     
                     </p>
-                </div>
-            </div>
+                    <p class="font-light text-sm text-gray-900 mt-8 text-justify">
+                        With 10 years of proven excellence, 
+                        we’ve earned the trust of thousands by delivering unmatched value in real estate. 
+                        Along the way, we've been honored with multiple industry awards, 
+                        recognizing our commitment to quality, service, and innovation..
+                    </p>
 
+                    <div
+                    class="  grid  sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4   xl:grid-cols-4  py-0 flex justify-center items-center gap-0 ">
+    
+                    <div class="flex rounded-sm  flex-col  justify-center items-center h-44 ">
+                        <img src="assets/work/house.png" alt="" srcset=""
+                            class="h-10 w-10 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
+                        <div>
+                            <p class="text-xl font-bold text-blue-700 mt-3 font-bold text-center" id="house">0</p>
+                            <p class="text-xs text-gray-500 font-medium text-center">Rented</p>
+                        </div>
+                    </div>
+    
+                    <div class="flex rounded-sm  flex-col justify-center items-center h-44  ">
+                        <img src="assets/work/skyline.png" alt="" srcset=""
+                            class="h-10 w-10 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
+                        <div>
+                            <p class="text-xl font-bold text-blue-700 mt-3 font-bold text-center" id="project">0</p>
+                            <p class="text-xs text-gray-500 font-medium  text-center">Working Under Project</p>
+                        </div>
+                    </div>
+    
+                    <div class="flex rounded-sm  flex-col justify-center items-center h-44 ">
+                        <img src="assets/work/sale.png" alt="" srcset=""
+                            class="h-10 w-10 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
+                        <div>
+                            <p class="text-xl font-bold text-blue-700 mt-3 font-bold text-center" id="sale">0</p>
+                            <p class="text-xs text-gray-500 font-medium ">Property Sold</p>
+                        </div>
+                    </div>
+    
+                    <div class="flex rounded-sm  flex-col justify-center items-center h-44 ">
+                        <img src="assets/work/measure.png" alt="" srcset=""
+                            class="h-8 w-8 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
+                        <div>
+                            <p class="text-xl font-bold text-blue-700 mt-3 font-bold text-center" id="area">1 lakh+</p>
+                            <p class="text-xs text-gray-500 font-medium ">Area Square Ft</p>
+                        </div>
+                    </div>
+    
+                </div>
+                   
+                </div>
+                
+                
+            </div>
         </div>
         <div>
 
-            <div class=" container grid  sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4   xl:grid-cols-4  py-0 flex justify-center items-center gap-10 ">
-
-                <div class="flex rounded-sm  flex-col  justify-center items-center h-44 ">
-                    <img src="assets/work/house.png" alt="" srcset="" class="h-12 w-12 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
-                    <div>
-                        <p class="text-2xl font-bold text-blue-700 mt-5 font-bold text-center" id="house">0</p>
-                        <p class="text-sm text-gray-500 font-medium text-center">Rented</p>
-                    </div>
-                </div>
-
-                <div class="flex rounded-sm  flex-col justify-center items-center h-44  ">
-                    <img src="assets/work/skyline.png" alt="" srcset="" class="h-12 w-12 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
-                    <div>
-                        <p class="text-2xl font-bold text-blue-700 mt-5 font-bold text-center" id="project">0</p>
-                        <p class="text-sm text-gray-500 font-medium  ">Working Under Project</p>
-                    </div>
-                </div>
-
-                <div class="flex rounded-sm  flex-col justify-center items-center h-44 ">
-                    <img src="assets/work/sale.png" alt="" srcset="" class="h-12 w-12 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
-                    <div>
-                        <p class="text-2xl font-bold text-blue-700 mt-5 font-bold text-center" id="sale">0</p>
-                        <p class="text-sm text-gray-500 font-medium ">Property Sold</p>
-                    </div>
-                </div>
-
-                <div class="flex rounded-sm  flex-col justify-center items-center h-44 ">
-                    <img src="assets/work/measure.png" alt="" srcset="" class="h-12 w-12 group-hover:h-16 w-16 transition-colors duration-300 ease-in-out  fill-orange-900">
-                    <div>
-                        <p class="text-2xl font-bold text-blue-700 mt-5 font-bold text-center" id="area">0</p>
-                        <p class="text-sm text-gray-500 font-medium ">Area Square Ft</p>
-                    </div>
-                </div>
-
-            </div>
+          
         </div>
-
-    </div>
-    <!--Acheivemnets-->
-    <!-- <div class=" flex flex-col">
-        <div class="mt-12">
-            <p class="text-5xl font-bold flex   justify-center items-center">Achievements
-            </p>
-        </div>
-        <div class="grid grid-cols-4  container gap-5  justify-center items-center ">
-            <img src="assets/achievements/1.jpeg" class="w-64" alt="" srcset="">
-            <img src="assets/achievements/2.jpeg" class="w-64" alt="" srcset="">
-            <img src="assets/achievements/3.jpeg" class="w-64" alt="" srcset="">
-            <img src="assets/achievements/4.jpeg" class="w-64" alt="" srcset="">
-            <img src="assets/achievements/5.jpeg" class="w-64" alt="" srcset="">
-            <img src="assets/achievements/1.jpeg" class="w-64" alt="" srcset="">
-            <img src="assets/achievements/2.jpeg" class="w-64" alt="" srcset="">
-            <img src="assets/achievements/3.jpeg" class="w-64" alt="" srcset="">
-
-        </div>
-
-
-    </div> -->
-
-    <!--Work Done-->
 
 
     <!--OUR TEAM-->
-    <div class="container">
+    <!-- <div class="container">
         <div class="mt-5">
             <div class="flex  "><span class="text-2xl font-bold   text-secondary-500 mt-8">Our
                     Team</span>
@@ -574,62 +730,243 @@
                         <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+ Years)</p>
                      </div>
                 </div>
-            </div> -->
+            </div> 
             <div class="relative h-80 rounded-md overflow-hidden group">
-                <div class="absolute inset-0 bg-[url('/landing-page-tailwind/assets/about_us/ceo.jpg')] bg-cover transition-transform duration-300 group-hover:scale-105">
+                <div
+                    class="absolute inset-0 bg-[url('/landing-page-tailwind/assets/about_us/vishal.jpg')] bg-cover transition-transform duration-300 group-hover:scale-105">
                 </div>
 
                 <div class="absolute bottom-0 left-0 right-0 p-2 m-1 bg-white rounded-xs">
                     <p class="text-sm text-gray-500 font-semibold text-primary-700">Mr. Vishal Chaudhary</p>
                     <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+ Years)
+                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+
+                            Years)
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class="h-80 bg-[url('/landing-page-tailwind/assets/about_us/ceo.jpg')] bg-cover rounded-md flex flex-col justify-end ">
+            <div
+                class="h-80 bg-[url('/landing-page-tailwind/assets/about_us/raju.jpg')] bg-cover rounded-md flex flex-col justify-end ">
                 <div class="card-footer p-2 m-1 bg-white  rounded-xs">
                     <p class="text-sm text-gray-500 font-semibold text-primary-700">Mr. Raj Mijgai</p>
                     <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+ Years)
+                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+
+                            Years)
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class=" h-80 bg-[url('/landing-page-tailwind/assets/about_us/ceo.jpg')] bg-cover rounded-md flex flex-col justify-end ">
+            <div
+                class=" h-80 bg-[url('/landing-page-tailwind/assets/about_us/saurabh.jpg')] bg-cover rounded-md flex flex-col justify-end ">
                 <div class="card-footer p-2 m-1 bg-white  rounded-xs">
                     <p class="text-sm text-gray-500 font-semibold text-primary-700">Mr. Saurabh Mandogade</p>
                     <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+ Years)
+                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+
+                            Years)
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div class=" h-80 bg-[url('/landing-page-tailwind/assets/about_us/ceo.jpg')] bg-cover rounded-md flex flex-col justify-end">
+            <div
+                class=" h-80 bg-[url('/landing-page-tailwind/assets/about_us/anil.jpg')] bg-cover rounded-md flex flex-col justify-end">
                 <div class="card-footer p-2 m-1 bg-white  rounded-xs">
                     <p class="text-sm text-gray-500 font-semibold text-primary-700">Mr. Anil Topanamappa</p>
                     <div class="flex justify-between items-center">
-                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+ Years)
+                        <p class="text-xs text-gray-400 mt-1">Experienced Real Estate Sales & Marketing Manager (8+
+                            Years)
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="container">
+        <div class="mt-5">
+            <div class=" text-2xl font-bold text-center    mt-8 ">
+                Our Team
+            </div>
+
+
+        </div>
+        <div class=" grid  md:grid-cols-5 sm:grid-cols-1 gap-5  flex  mt-10">
+           
+            <div class=" h-80 rounded-md  group">
+                 <div
+                    class=" inset-0 bg-[url('/landing-page-tailwind/assets/about_us/vishal.jpg')] rounded-xl w-full h-64  bg-no-repeat bg-cover  transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <p class="text-sm text-gray-700 font-semibold mt-3">Mr. Vishal Chaudhary</p>
+                <p class="text-xs text-gray-700 font-medium mt-1">Experienced Real Estate Sales & Marketing Manager (8+
+                    Years)</p>
+            </div>
+
+            <div class=" h-80 rounded-md  group">
+                <div
+                   class=" inset-0 bg-[url('/landing-page-tailwind/assets/about_us/raju.jpg')] rounded-xl w-full h-64  bg-no-repeat bg-cover  transition-transform duration-300 group-hover:scale-105">
+               </div>
+               <p class="text-sm text-gray-700 font-semibold mt-3">Mr. Raj Mijgai</p>
+               <p class="text-xs text-gray-700 font-medium mt-1">Experienced Real Estate Sales & Marketing Manager (8+
+                Years)</p>
+           </div>
+
+           <div class=" h-80 rounded-md  group">
+            <div
+               class=" inset-0 bg-[url('/landing-page-tailwind/assets/about_us/saurabh.jpg')] rounded-xl w-full h-64  bg-no-repeat bg-cover  transition-transform duration-300 group-hover:scale-105">
+           </div>
+           <p class="text-sm text-gray-700 font-semibold mt-3">Mr. Saurabh Mandogade</p>
+           <p class="text-xs text-gray-700 font-medium mt-1">Experienced Real Estate Sales & Marketing Manager (8+
+            Years)</p>
+           </div>
+
+           <div class=" h-80 rounded-md  group">
+            <div
+               class=" inset-0 bg-[url('/landing-page-tailwind/assets/about_us/anil.jpg')] rounded-xl w-full h-64  bg-no-repeat bg-cover  transition-transform duration-300 group-hover:scale-105">
+           </div>
+           <p class="text-sm text-gray-700 font-semibold mt-3">Mr. Anil Topanamappa</p>
+           <p class="text-xs text-gray-700 font-medium mt-1"> Sales & Marketing Manager (4+ Years)</p>
+           </div>
+           <div class=" h-80 rounded-md  group">
+            <div
+               class=" inset-0 bg-[url('/landing-page-tailwind/assets/about_us/sairaj.jpeg')] rounded-xl w-full h-64  bg-no-repeat bg-cover  transition-transform duration-300 group-hover:scale-105">
+           </div>
+           <p class="text-sm text-gray-700 font-semibold mt-3">Mr. Sairaj Shinde</p>
+           <p class="text-xs text-gray-700 font-medium mt-1">Sales & Marketing</p></div>
+        </div>
     </div>
 
-   
+
     <!--Client Feedback-->
-    <div class="bg-secondary-50">
+    <div class="bg-gray-50">
         <div class=" justify-center flex flex-col">
-            <p class=" text-2xl font-bold  text-center text-secondary-500 mt-8 ">Custmer Feedback</p>
+            <p class=" text-2xl font-bold  text-center  mt-8 ">Customer Feedback</p>
         </div>
 
+        <div class="px-[10%]" >
         <div class="swiper testimonial-swiper">
-            <div class="swiper-wrapper">
+             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-10  mt-5 ">
+                        <div class=" col-md-1 flex flex-col justify-center">
+                            <div class="flex mt-5 px-2 ">
+                                <div class="flex flex-row ">
+                                    <div>
+                                        <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-12" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <p class=" font-light text-sm text-start px-2 mt-2">
+                                Searches for multiplexes, property comparisons, and the loan estimator. Works great.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dores.
+                            </p>
+                        </div>
+
+                        <div class="flex p-2 sm:p-4">
+                            <img src="/landing-page-tailwind/assets/customer/customer.jpg"
+                                class="w-full h-96 object-top object-cover rounded-md" alt="">
+                        </div>
+                    </div>
+                 </div>
+                <div class="swiper-slide">
+                    <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-10  mt-5 ">
+                        <div class=" col-md-1 flex flex-col justify-center">
+                            <div class="flex mt-5 px-2 ">
+                                <div class="flex flex-row ">
+                                    <div>
+                                        <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-12" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <p class=" font-light text-sm text-start px-2 mt-2">
+                                Searches for multiplexes, property comparisons, and the loan estimator. Works great.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dores.
+                            </p>
+                        </div>
+
+                        <div class="flex p-2 sm:p-4">
+                            <img src="/landing-page-tailwind/assets/customer/customer_2.jpg"
+                                class="w-full h-96 object-cover rounded-md" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-10  mt-5 ">
+                        <div class=" col-md-1 flex flex-col justify-center">
+                            <div class="flex mt-5 px-2 ">
+                                <div class="flex flex-row ">
+                                    <div>
+                                        <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-12" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                            <p class=" font-light text-sm text-start px-2 mt-2">
+                                Searches for multiplexes, property comparisons, and the loan estimator. Works great.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dores.
+                            </p>
+                        </div>
+
+                        <div class="flex p-2 sm:p-4">
+                            <img src="/landing-page-tailwind/assets/customer/customer_3.jpg"
+                                class="w-full h-96 object-top object-cover rounded-md" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-slide">
+                    <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-10  mt-5 ">
+                        <div class=" col-md-1 flex flex-col justify-center">
+                            <div class="flex mt-5 px-2 ">
+                                <div class="flex flex-row ">
+                                    <div>
+                                        <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-12" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <p class=" font-light text-sm text-start px-2 mt-2">
+                                Searches for multiplexes, property comparisons, and the loan estimator. Works great.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dores.
+                            </p>
+                        </div>
+
+                        <div class="flex p-2 sm:p-4">
+                            <img src="/landing-page-tailwind/assets/customer/customer_4.jpg"
+                                class="w-full h-96 object-top object-cover rounded-md" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="swiper-slide">
                     <div class="grid md:grid-cols-[12%_auto_auto_12%] sm:grid-cols-1 gap-10 h-96 mt-5">
                         <div class=" md:col-start-2 flex flex-col justify-center">
                             <div class="flex mt-5 px-2 ">
@@ -654,8 +991,38 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
                 <div class="swiper-slide">
+                    <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-10  mt-5 ">
+                        <div class=" col-md-1 flex flex-col justify-center">
+                            <div class="flex mt-5 px-2 ">
+                                <div class="flex flex-row ">
+                                    <div>
+                                        <img src="/landing-page-tailwind/assets/customer/author.jpg"
+                                            class="rounded-full w-12" alt="">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold ml-3 text-sm">Mr. Saurabh Mandogade</p>
+                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            <p class=" font-light text-sm text-start px-2 mt-2">
+                                Searches for multiplexes, property comparisons, and the loan estimator. Works great.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dores.
+                            </p>
+                        </div>
+
+                        <div class="flex p-2 sm:p-4">
+                            <img src="/landing-page-tailwind/assets/customer/customer_5.jpg"
+                                class="w-full h-96 object-top object-cover rounded-md" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="swiper-slide">
                     <div class="grid md:grid-cols-[12%_auto_auto_12%] sm:grid-cols-1 gap-10 h-96 mt-5">
                         <div class=" md:col-start-2 flex flex-col justify-center">
                             <div class="flex mt-5 px-2 ">
@@ -667,7 +1034,7 @@
                                         <p class="font-semibold ml-3 text-sm">Mr. Saurabh Mandogade</p>
                                         <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
                                     </div>
-                                    <img src="assets/customer/Vector (6).svg" alt="">
+                                  
                                 </div>
                             </div>
                             <p class=" font-light text-sm text-start px-2 mt-2">
@@ -680,39 +1047,12 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="swiper-slide">
-                    <div class="grid md:grid-cols-[12%_auto_auto_12%] sm:grid-cols-1 gap-10 h-96 mt-5">
-                        <div class=" md:col-start-2 flex flex-col justify-center">
-                            <div class="flex mt-5 px-2 ">
-                                <div class="flex flex-row ">
-                                    <div>
-                                        <img src="/landing-page-tailwind/assets/customer/author.jpg" class="rounded-full w-12" alt="">
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold ml-3 text-sm">Mr. Saurabh Mandogade</p>
-                                        <p class="font-medium ml-3 text-gray-400 text-xs p-0 m-0">Buyer</p>
-                                    </div>
-                                    <img src="assets/customer/Vector (6).svg" alt="">
-                                </div>
-                            </div>
-                            <p class=" font-light text-sm text-start px-2 mt-2">
-                                Searches for multiplexes, property comparisons, and the loan estimator. Works great. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dores.
-                            </p>
-                        </div>
-
-                        <div class="flex items-center order-2 sm:order-1 p-2 sm:p-4">
-                            <img src="/landing-page-tailwind/assets/customer/h62.png" class="w-full" alt="">
-                        </div>
-                    </div>
-
-                </div>
+                </div> -->
 
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-
+           
         </div>
+    </div>
     </div>
 
     </div>
@@ -720,32 +1060,39 @@
     <!--Contact us-->
     <div class="flex justify-center items-start mx-16">
         <div class="w-full">
-            <p class=" sm:text-xl md:text-2xl lg:text-2xl  font-bold flex mt-8 text-secondary-500">Looking for a dream home ?
+            <p class=" sm:text-xl md:text-2xl lg:text-2xl  font-bold flex mt-8 text-gray-700">Looking for a dream
+                home ?
             </p>
-            <p class="text-sm font-normal flex mt-3 ">Let us help turn your dream of a new home into reality — just give us a call.</p>
+            <p class="text-sm font-normal flex mt-2 text-gray-700">Let us help turn your dream of a new home into reality — just give
+                us a call.</p>
         </div>
     </div>
 
     <div class="mt-5">
         <div class="grid grid-cols-1  flex  md:grid-cols-2  xl:grid-cols-2   lg:grid-cols-2 ">
-            <div class=" flex flex-col items-center bg-secondary-50 p-6">
+            <div class=" flex flex-col items-center bg-gray-100 p-6">
                 <div class=" justify-center flex flex-col">
-                    <p class=" text-2xl text-primary-600 text-2xl font-bold">Contact Information</p>
-                    <p class=" text-sm font-normal text-center">Feel up the form and our Team will get back to you within 24 hours. </p>
+                    <p class=" text-2xl text-2xl font-bold text-start">Contact Information</p>
+                    <!-- <p class=" text-sm font-normal text-center">Feel up the form and our Team will get back to you
+                        within 24 hours. </p> -->
                 </div>
                 <div class="max-w-lg w-full mt-5">
                     <form action="#" method="POST" class="space-y-4">
                         <div>
-                            <input type="text" placeholder="Name" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+                            <input type="text" placeholder="Name"
+                                class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
                         </div>
                         <div>
-                            <input type="tel" placeholder="Mobile number" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+                            <input type="tel" placeholder="Mobile number"
+                                class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
                         </div>
                         <div>
-                            <input type="email" placeholder="Email" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
+                            <input type="email" placeholder="Email"
+                                class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm">
                         </div>
                         <div>
-                            <textarea rows="3" placeholder="Address" class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm"></textarea>
+                            <textarea rows="3" placeholder="Address"
+                                class="w-full p-3 border rounded-sm focus:outline-none focus:ring-2 focus:ring-primary placeholder:text-sm"></textarea>
                         </div>
                         <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">
                             Submit
@@ -760,18 +1107,19 @@
                     <div class="flex gap-2 ">
                         <img src="assets/contact/location.png" alt="" srcset="" class="w-4 h-4 mt-1">
                         <p class="text-white text-md font-semibold ">
-                            Shop Number 14,15, Bhoomi Park Phase 1, near Billabong International School, Malad, Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095
+                            Shop Number 14,15, Bhoomi Park Phase 1, near Billabong International School, Malad,
+                            Jankalyan Nagar, Malad West, Mumbai, Maharashtra 400095
                         </p>
                     </div>
 
                     <div class="flex gap-2 mt-4 items-center">
                         <img src="assets/contact/telephone-symbol-button.png" alt="" srcset="" class="w-4 h-4">
-                        <p class="text-white text-md font-semibold">+91 09930271974</p>
+                        <p class="text-white text-md font-semibold">+91-9930271974  +91-9619805025  </p>
                     </div>
 
                     <div class="flex gap-2  items-center">
                         <img src="assets/contact/mail.png" alt="" srcset="" class="w-4 h-4">
-                        <p class="text-white text-md font-semibold">wwwsiddhivinayakrealestate2@gmail.com</p>
+                        <p class="text-white text-md font-semibold">info@siddhivinayakestate.com</p>
                     </div>
 
                     <div class="flex gap-4 justify-end  mt-2">
