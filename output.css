@@ -1030,6 +1030,10 @@ h1,h2,h3{
   background-color: rgb(255 255 255 / 0.3);
 }
 
+.bg-\[url\(\'\/assets\/about_us\/vishal\.jpg\'\)\]{
+  background-image: url('/assets/about_us/vishal.jpg');
+}
+
 .bg-\[url\(\'\/landing-page-tailwind\/assets\/about_us\/anil\.jpg\'\)\]{
   background-image: url('/landing-page-tailwind/assets/about_us/anil.jpg');
 }
@@ -1042,16 +1046,28 @@ h1,h2,h3{
   background-image: url('/landing-page-tailwind/assets/about_us/raju.jpg');
 }
 
-.bg-\[url\(\'\/landing-page-tailwind\/assets\/about_us\/sairaj\.jpeg\'\)\]{
-  background-image: url('/landing-page-tailwind/assets/about_us/sairaj.jpeg');
-}
-
 .bg-\[url\(\'\/landing-page-tailwind\/assets\/about_us\/saurabh\.jpg\'\)\]{
   background-image: url('/landing-page-tailwind/assets/about_us/saurabh.jpg');
 }
 
 .bg-\[url\(\'\/landing-page-tailwind\/assets\/about_us\/vishal\.jpg\'\)\]{
   background-image: url('/landing-page-tailwind/assets/about_us/vishal.jpg');
+}
+
+.bg-\[url\(\'assets\/about_us\/anil\.jpg\'\)\]{
+  background-image: url('assets/about_us/anil.jpg');
+}
+
+.bg-\[url\(\'assets\/about_us\/raju\.jpg\'\)\]{
+  background-image: url('assets/about_us/raju.jpg');
+}
+
+.bg-\[url\(\'assets\/about_us\/sairaj\.jpeg\'\)\]{
+  background-image: url('assets/about_us/sairaj.jpeg');
+}
+
+.bg-\[url\(\'assets\/about_us\/saurabh\.jpg\'\)\]{
+  background-image: url('assets/about_us/saurabh.jpg');
 }
 
 .bg-\[url\(\'assets\/contact\/contact\.jpg\'\)\]{
@@ -1080,6 +1096,10 @@ h1,h2,h3{
 
 .bg-\[url\(\'assets\/feature_list\/plot_1\.png\'\)\]{
   background-image: url('assets/feature_list/plot_1.png');
+}
+
+.bg-\[url\(\'assets\/about_us\/vishal\.jpg\'\)\]{
+  background-image: url('assets/about_us/vishal.jpg');
 }
 
 .bg-cover{
