@@ -1,8 +1,7 @@
 const navDialog = document.getElementById('nav-dialog');
 window.addEventListener('scroll', () => {
   const header = document.getElementById('main-header');
-  const navItem = document.getElementById('nav-menu-item');
- 
+
   if (window.scrollY > 50) {
     // When scrolled: white background, black text
     header.classList.remove('bg-transparent', 'text-white');
