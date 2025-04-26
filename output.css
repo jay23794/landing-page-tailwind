@@ -1030,8 +1030,42 @@ h1,h2,h3{
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.bg-\[url\(\'\/assets\/about_us\/vishal\.jpg\'\)\]{
-  background-image: url('/assets/about_us/vishal.jpg');
+.bg-primary-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-900\/50{
+  background-color: rgb(17 24 39 / 0.5);
+}
+
+.bg-gray-900\/30{
+  background-color: rgb(17 24 39 / 0.3);
+}
+
+.bg-gray-900\/10{
+  background-color: rgb(17 24 39 / 0.1);
+}
+
+.bg-gray-900\/80{
+  background-color: rgb(17 24 39 / 0.8);
+}
+
+.bg-white\/80{
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.bg-white\/50{
+  background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-opacity-50{
+  --tw-bg-opacity: 0.5;
 }
 
 .bg-\[url\(\'\/landing-page-tailwind\/assets\/about_us\/anil\.jpg\'\)\]{
@@ -1070,6 +1104,10 @@ h1,h2,h3{
   background-image: url('assets/about_us/saurabh.jpg');
 }
 
+.bg-\[url\(\'assets\/about_us\/vishal\.jpg\'\)\]{
+  background-image: url('assets/about_us/vishal.jpg');
+}
+
 .bg-\[url\(\'assets\/contact\/contact\.jpg\'\)\]{
   background-image: url('assets/contact/contact.jpg');
 }
@@ -1096,10 +1134,6 @@ h1,h2,h3{
 
 .bg-\[url\(\'assets\/feature_list\/plot_1\.png\'\)\]{
   background-image: url('assets/feature_list/plot_1.png');
-}
-
-.bg-\[url\(\'assets\/about_us\/vishal\.jpg\'\)\]{
-  background-image: url('assets/about_us/vishal.jpg');
 }
 
 .bg-cover{
